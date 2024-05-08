@@ -1,0 +1,22 @@
+﻿@page
+@model taskApp.Pages.LoginModel
+@{
+}
+
+
+<main class="form-signin w-100 m-auto">
+  <form method="post">
+    <h1 class="h3 mb-3 fw-normal">Iniciar Sesi&oacute;n</h1>
+
+    <div>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" class="form-control" name="email" asp-for="Email" required />
+    </div>
+    <div>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" class="form-control" name="password" asp-for="Password" required />
+    </div>
+
+    <button class="btn btn-primary w-100 py-2 mt-2" type="submit">Iniciar</button>
+  </form>
+</main>

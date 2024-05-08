@@ -1,0 +1,41 @@
+﻿@page "/Index"
+@model IndexModel
+@{
+    ViewData["Title"] = "Tareas";
+}
+
+<div class="text-center">
+
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Fecha Creacion</th>
+      <th scope="col">Fecha Expiracion</th>
+      <th scope="col">Completada</th>
+    </tr>
+  </thead>
+  <tbody>
+            @if (Model.Tasks != null)
+            {
+                @foreach (var task in Model.Tasks)
+                {
+                    <tr>
+                        <td>@task.id</td>
+                        <td>@task.title</td>
+                        <td>@task.description</td>
+                        <td>@task.dateCreated</td>
+                        <td>@task.dateExpiration</td>
+                        <td>@task.completed</td>
+                    </tr>
+
+                }
+
+            }
+  </tbody>
+</table>
+
+
+</div>
