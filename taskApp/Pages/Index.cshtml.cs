@@ -3,10 +3,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using taskApp.Model;
 
+
 namespace taskApp.Pages
 {
     public class IndexModel : PageModel
     {
+
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _configuration;
 
@@ -32,6 +34,11 @@ namespace taskApp.Pages
             {
                 // Manejar el caso de error
             }
+        }
+
+        public IActionResult EditTask(TaskModel task)
+        {
+            return RedirectToPage("/Index");
         }
 
 

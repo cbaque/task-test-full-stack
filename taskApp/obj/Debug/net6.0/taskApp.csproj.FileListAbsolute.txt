@@ -38,6 +38,7 @@ C:\Users\claud\source\repos\task\taskApp\bin\Debug\net6.0\Microsoft.IdentityMode
 C:\Users\claud\source\repos\task\taskApp\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\claud\source\repos\task\taskApp\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\claud\source\repos\task\taskApp\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\claud\source\repos\task\taskApp\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\claud\source\repos\task\taskApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\claud\source\repos\task\taskApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\claud\source\repos\task\taskApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -74,4 +75,3 @@ C:\Users\claud\source\repos\task\taskApp\obj\Debug\net6.0\refint\taskApp.dll
 C:\Users\claud\source\repos\task\taskApp\obj\Debug\net6.0\taskApp.pdb
 C:\Users\claud\source\repos\task\taskApp\obj\Debug\net6.0\taskApp.genruntimeconfig.cache
 C:\Users\claud\source\repos\task\taskApp\obj\Debug\net6.0\ref\taskApp.dll
-C:\Users\claud\source\repos\task\taskApp\bin\Debug\net6.0\Newtonsoft.Json.dll

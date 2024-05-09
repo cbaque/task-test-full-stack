@@ -15,6 +15,7 @@
       <th scope="col">Fecha Creacion</th>
       <th scope="col">Fecha Expiracion</th>
       <th scope="col">Completada</th>
+      <th scope="col">Acciones</th>
     </tr>
   </thead>
   <tbody>
@@ -29,6 +30,11 @@
                         <td>@task.dateCreated</td>
                         <td>@task.dateExpiration</td>
                         <td>@task.completed</td>
+                        <td>
+                            <button type="button" disabled class="btn btn-primary">Editar</button>
+
+                            <button type="button" disabled class="btn btn-danger">Eliminar</button>
+                        </td>
                     </tr>
 
                 }

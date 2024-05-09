@@ -1,0 +1,71 @@
+﻿@page "/Create"
+@model taskApp.Pages.CreateModel
+@{
+    ViewData["Title"] = "Nueva Tarea";
+}
+
+<div class="container">
+
+    <form method="post">
+
+        <div class="row">
+            <div class="col-12">
+                <p class="text-start">Crear Nueva Tarea</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="title" asp-for="title" placeholder="titulo">
+                    <label for="title">Titulo</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-floating mb-3">
+                    <textarea rows="2" type="text" class="form-control" asp-for="description" id="description" placeholder="descripción"></textarea>
+                    <label for="description">Descripci&oacute;n</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-6">
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="dateCreate"  asp-for="dateCreate" placeholder="Fecha Creación">
+                    <label for="dateCreate">Fecha Creaci&oacute;n</label>
+                </div>
+            </div>
+
+             <div class="col-6">
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="dateExpirate" asp-for="dateExpirate" placeholder="Fecha Vencimiento">
+                    <label for="dateExpirate">Fecha Expiraci&oacute;n</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-6">
+                <input type="checkbox" class="btn-check" asp-for="complete" id="btn-check-outlined" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btn-check-outlined">Completada</label>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-primary w-100 py-2 mt-2" type="submit">Crear</button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+</div>

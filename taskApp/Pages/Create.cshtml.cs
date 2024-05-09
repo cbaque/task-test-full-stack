@@ -4,24 +4,32 @@ using Newtonsoft.Json;
 
 namespace taskApp.Pages
 {
-    public class LoginModel : PageModel
+    public class CreateModel : PageModel
     {
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IConfiguration _configuration;
 
         [BindProperty]
-        public string Email { get; set; } = "admin@example.com";
+        public string title { get; set; }
 
         [BindProperty]
-        public string Password { get; set; } = "Admin.c0m";
+        public string description { get; set; }
+
+        [BindProperty]
+        public DateTime dateCreate { get; set; } = DateTime.Now;
+
+        [BindProperty]
+        public DateTime dateExpirate { get; set; } = DateTime.Now;
+
+        [BindProperty]
+        public Boolean complete { get; set; }
 
 
-        public LoginModel(IHttpClientFactory httpClientFactory, IConfiguration configuration)
+        public CreateModel(IHttpClientFactory httpClientFactory, IConfiguration configuration)
         {
             _httpClientFactory = httpClientFactory;
             _configuration = configuration;
         }
-
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -33,38 +41,35 @@ namespace taskApp.Pages
 
                 var requestData = new
                 {
-                    Email = Email,
-                    Password = Password
+                    title = title,
+                    description = description,
+                    dateCreated = dateCreate,
+                    dateExpiration = dateExpirate,
+                    completed = complete,
                 };
 
                 var jsonContent = JsonConvert.SerializeObject(requestData);
                 var requestContent = new StringContent(jsonContent, System.Text.Encoding.UTF8, "application/json");
 
-                var response = await httpClient.PostAsync($"{apiBaseUrl}/auth/login", requestContent);
+                var response = await httpClient.PostAsync($"{apiBaseUrl}/task/create", requestContent);
 
 
                 if (response.IsSuccessStatusCode)
                 {
-                    var token = await response.Content.ReadAsStringAsync();
-
-                    TempData["token"] = token;
                     return RedirectToPage("/Index");
                 }
                 else
                 {
-                    TempData["error"] = "Credenciales incorrectas.";
+                    TempData["error"] = "Error al registrar nueva tarea.";
                     return Page();
                 }
             }
             catch (Exception ex)
             {
-                TempData["error"] = $"Error al iniciar sesión: {ex.Message}";
+                TempData["error"] = $"Error: {ex.Message}";
                 return Page();
             }
         }
-
-
-
 
     }
 }

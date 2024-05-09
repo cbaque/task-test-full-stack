@@ -29,6 +29,9 @@ app.UseEndpoints(endpoints =>
     {
         context.Response.Redirect("/Login");
     });
+
+    endpoints.MapFallbackToPage("/EditTask", "/EditTask");
+
 });
 
 app.Run();
