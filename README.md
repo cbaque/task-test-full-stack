@@ -11,5 +11,5 @@
 "# se usa code firts mediante EF para manipular datos"
 "# se crea api para autenticarse, listar y crear tareas"
 "# se crea front end de login, y listado de tareas."
-"# por falta de tiempo no se crear crear, editar y eliminar"
+"# por falta de tiempo no hay pantalla de crear, editar y eliminar"
 
